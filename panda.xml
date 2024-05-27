@@ -149,7 +149,7 @@
     <camera mode="fixed" name="birdview" pos="-0.2 0.0 3.0" quat="0.7071 0 0 0.7071" />
     <camera mode="fixed" name="agentview" pos="0.5 0.0 1.35" quat="0.653 0.271 0.271 0.653" />
     <camera mode="fixed" name="sideview" pos="0.0 1.6 1.2" quat="0 0 0.7071 0.7071" />
-    <camera mode="fixed" name="targetview" pos="-0.5 0.0 1.35" quat="-0.653 -0.271 0.271 0.653"/>
+    <camera mode="fixed" name="targetview" pos="-0.5 0.0 1.35" quat="-0.653 -0.271 0.271 0.653" fovy="58" resolution="620 480"/>
 
     <!-- Table -->
     <body name="table" pos="0.0 0.0 0.775">
@@ -162,10 +162,10 @@
     </body>
 
     <!-- Object -->
-    <body name="object" pos="0 0 0.805">
+    <body name="object" pos="0 0 0.85">
       <freejoint name="object"/>
-      <geom name="object_collision" pos="0 0 0" size="0.005 0.005 0.005" type="box" class="collision"/>
-      <geom name="object_visual" pos="0 0 0" size="0.005 0.005 0.005" type="box" rgba="1 0 0 1" class="visual"/>
+      <geom name="object_collision" pos="0 0 0" size="0.025 0.05" type="cylinder" class="collision"/>
+      <geom name="object_visual" pos="0 0 0" size="0.025 0.05" type="cylinder" rgba="1 0 0 1" class="visual"/>
     </body>
 
     <!-- Mount & Robot-->
@@ -345,7 +345,4 @@
       gainprm="0.01568627451 0 0" biasprm="0 -100 -10"/>
   </actuator>
 
-  <keyframe>
-    <key name="home" qpos="0 0 0 -1.57079 0 1.57079 -0.7853 0.04 0.04"/>
-  </keyframe>
 </mujoco>
