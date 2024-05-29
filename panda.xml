@@ -291,11 +291,11 @@
                           <geom mesh="finger_0" material="off_white" class="visual"/>
                           <geom mesh="finger_1" material="black" class="visual"/>
                           <geom mesh="finger_0" class="collision"/>
-                          <geom name="left_finger_collision_1" class="fingertip_pad_collision_1"/>
-                          <geom name="left_finger_collision_2" class="fingertip_pad_collision_2"/>
-                          <geom name="left_finger_collision_3" class="fingertip_pad_collision_3"/>
-                          <geom name="left_finger_collision_4" class="fingertip_pad_collision_4"/>
-                          <geom name="left_finger_collision_5" class="fingertip_pad_collision_5"/>
+                          <geom class="fingertip_pad_collision_1"/>
+                          <geom class="fingertip_pad_collision_2"/>
+                          <geom class="fingertip_pad_collision_3"/>
+                          <geom class="fingertip_pad_collision_4"/>
+                          <geom class="fingertip_pad_collision_5"/>
                         </body>
                         <body name="right_finger" pos="0 0 0.0584" quat="0 0 0 1">
                           <inertial mass="0.015" pos="0 0 0" diaginertia="2.375e-6 2.375e-6 7.5e-7"/>
@@ -303,11 +303,11 @@
                           <geom mesh="finger_0" material="off_white" class="visual"/>
                           <geom mesh="finger_1" material="black" class="visual"/>
                           <geom mesh="finger_0" class="collision"/>
-                          <geom name="right_finger_collision_1" class="fingertip_pad_collision_1"/>
-                          <geom name="right_finger_collision_2" class="fingertip_pad_collision_2"/>
-                          <geom name="right_finger_collision_3" class="fingertip_pad_collision_3"/>
-                          <geom name="right_finger_collision_4" class="fingertip_pad_collision_4"/>
-                          <geom name="right_finger_collision_5" class="fingertip_pad_collision_5"/>
+                          <geom class="fingertip_pad_collision_1"/>
+                          <geom class="fingertip_pad_collision_2"/>
+                          <geom class="fingertip_pad_collision_3"/>
+                          <geom class="fingertip_pad_collision_4"/>
+                          <geom class="fingertip_pad_collision_5"/>
                         </body>
                       </body>
                     </body>
@@ -327,6 +327,10 @@
       <joint joint="finger_joint2" coef="0.5"/>
     </fixed>
   </tendon>
+
+  <contact>
+    <exclude body1="left_finger" body2"right_finger"/>
+  </contact>
 
   <equality>
     <joint joint1="finger_joint1" joint2="finger_joint2" solimp="0.95 0.99 0.001" solref="0.005 1"/>
