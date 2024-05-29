@@ -329,7 +329,7 @@
   </tendon>
 
   <contact>
-    <exclude body1="left_finger" body2"right_finger"/>
+    <exclude body1="left_finger" body2="right_finger"/>
   </contact>
 
   <equality>
